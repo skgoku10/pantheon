@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0E0D1C; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  .phone { width: 320px; background: #1B1B3A; border-radius: 40px; padding: 0; box-shadow: 0 0 80px rgba(232,197,71,0.15); border: 1px solid rgba(255,255,255,0.08); min-height: 640px; display: flex; flex-direction: column; overflow: hidden; position: relative; }
+  .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 20px 8px; position: relative; z-index: 2; }
+  .logo { display: flex; align-items: center; gap: 6px; color: #F4EFE6; font-family: Georgia, serif; font-size: 12px; letter-spacing: 0.1em; }
+  .pts { color: #E8C547; font-family: monospace; font-size: 13px; display: flex; align-items: center; gap: 4px; }
+  .sky { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 8px 20px 20px; position: relative; }
+  .companion { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 6px 12px; font-family: system-ui, sans-serif; font-size: 11px; color: #C8C3E8; margin-bottom: 12px; }
+  .timer { font-family: 'Courier New', monospace; font-size: 38px; color: #F4EFE6; letter-spacing: 0.05em; margin-top: 12px; }
+  .phrase { font-family: system-ui, sans-serif; font-size: 11px; color: #8B86B8; text-align: center; margin-top: 6px; }
+  .end { font-family: system-ui, sans-serif; font-size: 11px; color: #8B86B8; text-decoration: underline; margin-top: 20px; }
+  .nav { display: flex; justify-content: space-around; padding: 12px 20px; background: rgba(20,19,43,0.92); border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 2; }
+  .nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; font-family: system-ui, sans-serif; font-size: 10px; }
+  @keyframes twinkle { 0%,100%{opacity:0.15} 50%{opacity:0.7} }
+</style>
+</head>
+<body>
+<div class="phone">
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 320 640" preserveAspectRatio="none">
+    <circle cx="30" cy="100" r="1" fill="#C8C3E8"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="290" cy="80" r="1.2" fill="#C8C3E8"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="2.5s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="250" cy="180" r="0.9" fill="#C8C3E8"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="4s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="50" cy="220" r="1" fill="#C8C3E8"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="3.5s" begin="0.2s" repeatCount="indefinite"/></circle>
+    <circle cx="280" cy="400" r="0.8" fill="#C8C3E8"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="2.8s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="20" cy="350" r="1" fill="#C8C3E8"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="3.2s" begin="0.8s" repeatCount="indefinite"/></circle>
+  </svg>
+
+  <div class="header">
+    <div class="logo">
+      <svg viewBox="0 0 100 100" width="16" height="16"><circle cx="50" cy="50" r="6" fill="#E8C547"/><ellipse cx="50" cy="50" rx="38" ry="14" fill="none" stroke="#E8C547" stroke-width="1.5" opacity="0.75" transform="rotate(-20 50 50)"/><ellipse cx="50" cy="50" rx="38" ry="14" fill="none" stroke="#C8C3E8" stroke-width="1.2" opacity="0.55" transform="rotate(40 50 50)"/></svg>
+      PANTHEON
+    </div>
+    <div class="pts">✦ 142</div>
+  </div>
+
+  <div class="sky">
+    <div class="companion">
+      <svg viewBox="0 0 100 100" width="22" height="22">
+        <circle cx="50" cy="23" r="8" fill="#E8C547"/>
+        <path d="M37 34 Q50 27 63 34 L60 64 Q60 73 50 76 Q40 73 40 64 Z" fill="#E8C547"/>
+        <path d="M38 36 Q27 41 25 55 Q23 64 30 66 Q34 57 37 45 Z" fill="#E8C547"/>
+        <path d="M62 36 Q73 41 75 55 Q77 64 70 66 Q66 57 63 45 Z" fill="#E8C547"/>
+        <path d="M43 71 L39 95 Q39 99 43 99 L46 99 L48 74 Z" fill="#E8C547"/>
+        <path d="M57 71 L61 95 Q61 99 57 99 L54 99 L52 74 Z" fill="#E8C547"/>
+        <polygon points="56,18 72,14 56,26" fill="#E8C547"/>
+      </svg>
+      Pegasus is with you
+    </div>
+
+    <div style="position:relative;width:220px;height:220px;">
+      <svg viewBox="0 0 230 230" width="220" height="220" style="position:absolute;top:0;left:0;">
+        <circle cx="115" cy="115" r="108" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3"/>
+        <circle cx="115" cy="115" r="108" fill="none" stroke="#E8C547" stroke-width="3"
+          stroke-dasharray="678.6" stroke-dashoffset="203.6"
+          stroke-linecap="round" transform="rotate(-90 115 115)"/>
+      </svg>
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 100 100" width="180" height="180">
+          <line x1="30" y1="30" x2="46" y2="46" stroke="#E8C547" stroke-width="1.4" stroke-opacity="0.85"/>
+          <line x1="46" y1="46" x2="68" y2="36" stroke="#E8C547" stroke-width="1.4" stroke-opacity="0.85"/>
+          <line x1="68" y1="36" x2="80" y2="52" stroke="#E8C547" stroke-width="1.4" stroke-opacity="0.6" stroke-dasharray="4,2"/>
+          <line x1="80" y1="52" x2="62" y2="68" stroke="#C8C3E8" stroke-width="0.8" stroke-opacity="0.18"/>
+          <line x1="62" y1="68" x2="40" y2="72" stroke="#C8C3E8" stroke-width="0.8" stroke-opacity="0.18"/>
+          <circle cx="30" cy="30" r="2" fill="#E8C547"/>
+          <circle cx="46" cy="46" r="2" fill="#E8C547"/>
+          <circle cx="68" cy="36" r="2" fill="#E8C547"/>
+          <circle cx="80" cy="52" r="1.8" fill="#E8C547" opacity="0.7"/>
+          <circle cx="62" cy="68" r="1.3" fill="#C8C3E8" opacity="0.35"/>
+          <circle cx="40" cy="72" r="1.3" fill="#C8C3E8" opacity="0.35"/>
+          <g opacity="0.15">
+            <circle cx="30" cy="30" r="3.5" fill="#E8C547"/>
+            <circle cx="46" cy="46" r="3.5" fill="#E8C547"/>
+            <circle cx="68" cy="36" r="3.5" fill="#E8C547"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="timer">17:42</div>
+    <div class="phrase">discipline is choosing what you want most</div>
+    <div class="end">end early — keep what you've earned</div>
+  </div>
+
+  <div class="nav">
+    <div class="nav-item" style="color:#E8C547;">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="#E8C547"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      Focus
+    </div>
+    <div class="nav-item" style="color:#8B86B8;">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8B86B8" stroke-width="2"><path d="M12 3l1.5 4.5H18l-3.75 2.75 1.5 4.5L12 12l-3.75 2.75 1.5-4.5L6 7.5h4.5z"/></svg>
+      Codex
+    </div>
+    <div class="nav-item" style="color:#8B86B8;">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8B86B8" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Tracker
+    </div>
+  </div>
+</div>
+</body>
+</html>
