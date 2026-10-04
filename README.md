@@ -12,9 +12,7 @@ No punishment for leaving early. No streak-shaming. No accounts. Just focus, and
 
 | Welcome | Focus Session | Codex |
 |---|---|---|
-| ![Onboarding](screenshots/01-onboarding.html) | ![Session](screenshots/02-focus-session.html) | ![Codex](screenshots/03-codex.html) |
-
-> Open the HTML files in the `screenshots/` folder in any browser to preview each screen.
+| ![Onboarding](screenshots/01-onboarding.svg) | ![Session](screenshots/02-focus-session.svg) | ![Codex](screenshots/03-codex.svg) |
 
 ---
 
